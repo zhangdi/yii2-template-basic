@@ -16,7 +16,7 @@ class <?= $className ?> extends Migration
 {
     public function up()
     {
-        $this->createTable('{{%<?= $table ?>}}', [
+        $this->createTable('<?= $table ?>', [
 <?php foreach ($fields as $field): ?>
 <?php if ($field == end($fields)): ?>
             '<?= $field['property'] ?>' => $this-><?= $field['decorators'] . "\n"?>
@@ -24,11 +24,11 @@ class <?= $className ?> extends Migration
             '<?= $field['property'] ?>' => $this-><?= $field['decorators'] . ",\n"?>
 <?php endif; ?>
 <?php endforeach; ?>
-        ], $this->getTableOptions() . ' comment "<?=$table?>"');
+        ], $this->getTableOptions() . ' comment ""');
     }
 
     public function down()
     {
-        $this->dropTable('{{%<?= $table ?>}}');
+        $this->dropTable('<?= $table ?>');
     }
 }
