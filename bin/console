@@ -11,8 +11,8 @@
 require(dirname(__DIR__) . '/src/bootstrap.php');
 
 $config = yii\helpers\ArrayHelper::merge(
-    require(BASE_PATH . '/src/config/main.php'),
-    require(BASE_PATH . '/src/config/console.php')
+    require(ROOT_PATH . '/src/config/main.php'),
+    require(ROOT_PATH . '/src/config/console.php')
 );
 
 $application = new yii\console\Application($config);
