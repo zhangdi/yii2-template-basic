@@ -1,6 +1,7 @@
 <?php
 
-use App\Env;
+
+use ZhangDi\Env\Env;
 
 defined("ROOT_PATH") or define("ROOT_PATH", dirname(__DIR__));
 defined("SRC_PATH") or define("SRC_PATH", dirname(__DIR__) . '/src');

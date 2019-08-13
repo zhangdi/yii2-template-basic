@@ -1,6 +1,7 @@
 <?php
 
-use App\Env;
+
+use ZhangDi\Env\Env;
 
 $host = Env::get('MYSQL_HOST', 'localhost');
 $dbname = Env::get('MYSQL_DBNAME', 'basic');
