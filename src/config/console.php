@@ -19,4 +19,19 @@ $config = [
     ]
 ];
 
+if (Env::get('ENV', 'prod') == 'dev') {
+    $config['bootstrap'] = ['gii'];
+    $config['modules']['gii'] = [
+        'class' => 'yii\gii\Module',
+        'generators' => [
+            'model' => [
+                'class' => 'App\Gii\Generators\Model\Generator',
+                'baseClass' => 'App\Db\ActiveRecord',
+                'generateLabelsFromComments' => true,
+                'useTablePrefix' => true,
+            ],
+        ]
+    ];
+}
+
 return $config;
