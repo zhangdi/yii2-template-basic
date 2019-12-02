@@ -1,4 +1,5 @@
 <?php
+use ZhangDi\Env\Env;
 
 $config = [
     'id' => 'console',
